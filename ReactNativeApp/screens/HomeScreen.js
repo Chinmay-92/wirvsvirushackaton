@@ -163,6 +163,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 10,
     marginBottom: 20,
+    backgroundColor:'#00FFFF',
   },
   welcomeImage: {
     width: 100,
@@ -203,7 +204,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: -3 },
         shadowOpacity: 0.1,
         shadowRadius: 3,
-      },
+              },
       android: {
         elevation: 20,
       },
