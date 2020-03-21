@@ -2,22 +2,16 @@
     "resources": {
         "en": {
             "translations": {
-                "title1": "my first entry",
-                "description1": "this is a text\n-this is a bullet point\n-and this also",
-                "imageUrl1": "/dev/null",
-                "title2": "my second entry",
-                "description2": "",
-                "imageUrl2": "/dev/x"
+                "title1": "Your extra layer of security",
+                "description1": "--Use single-use gloves to pick up goods items from the shelves\n--Use new single-use gloves and do not touch your face, the area around your eyes, or your nose with them\n--You do not have gloves? Use the small plastic bags for fruits and vegetables to cover your hands instead. Again: Do not touch your skin or face with them.\nhttps://www.youtube.com/watch?v=xueBYfElFEg",
+                "imageUrl1": "https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_wear_gloves.png?alt=media&token=46ac2b21-1c22-4d54-a960-02e7ab9b561f"
             }
         },
         "de": {
             "translations": {
-                "title1": "Der erste Eintrag",
-                "description1": "Das ist auch ein Text",
-                "imageUrl1": "/dev/null",
-                "title2": "Der zweite Eintrag",
-                "description2": "Das ist ein anderer Text",
-                "imageUrl2": "/dev/x"
+                "title1": "Deine extra Schutzschicht",
+                "description1": "--Einmalhandschuhe beim Anfassen von Waren verringern das Infektionsrisiko. \n--Benutze neue Einmalhandschuhe Verwende die Handschuhe nicht f\u00fcr mehrere Eink\u00e4ufe. Ber\u00fchre diese sie beim Anziehen nicht von au\u00dfen\n--Keine Handschuhe zur Hand :D? Verwende Plastikt\u00fcten aus der Obst und Gem\u00fcseabteilung\n--Fasse dir mit Handschuhen oder einer Plastikt\u00fcte nicht an Schleimh\u00e4ute oder in dein ins Gesicht, damit du keine Viren darauf \u00fcbertr\u00e4gst\nhttps://www.youtube.com/watch?v=xueBYfElFEg",
+                "imageUrl1": "https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_wear_gloves.png?alt=media&token=46ac2b21-1c22-4d54-a960-02e7ab9b561f"
             }
         }
     }

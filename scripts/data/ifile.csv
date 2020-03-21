@@ -1,7 +1,10 @@
 id;title;description;image
-1:en;my first entry;"this is a text
--this is a bullet point
--and this also";/dev/null
-1:de;Der erste Eintrag;Das ist auch ein Text;/dev/null
-2:en;my second entry;;/dev/x
-2:de;Der zweite Eintrag;Das ist ein anderer Text;/dev/x
+1:en;Your extra layer of security;"--Use single-use gloves to pick up goods items from the shelves
+--Use new single-use gloves and do not touch your face, the area around your eyes, or your nose with them
+--You do not have gloves? Use the small plastic bags for fruits and vegetables to cover your hands instead. Again: Do not touch your skin or face with them.
+https://www.youtube.com/watch?v=xueBYfElFEg";https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_wear_gloves.png?alt=media&token=46ac2b21-1c22-4d54-a960-02e7ab9b561f
+1:de;Deine extra Schutzschicht;"--Einmalhandschuhe beim Anfassen von Waren verringern das Infektionsrisiko. 
+--Benutze neue Einmalhandschuhe Verwende die Handschuhe nicht für mehrere Einkäufe. Berühre diese sie beim Anziehen nicht von außen
+--Keine Handschuhe zur Hand :D? Verwende Plastiktüten aus der Obst und Gemüseabteilung
+--Fasse dir mit Handschuhen oder einer Plastiktüte nicht an Schleimhäute oder in dein ins Gesicht, damit du keine Viren darauf überträgst
+https://www.youtube.com/watch?v=xueBYfElFEg";https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_wear_gloves.png?alt=media&token=46ac2b21-1c22-4d54-a960-02e7ab9b561f
