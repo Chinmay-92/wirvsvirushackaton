@@ -30,6 +30,7 @@ def convert(f_in, f_out):
             desc = rows['description']
             img = rows['image']
 
+            # Build the inner content added to the dict
             line_content_dict = {'title' + id_num : title, 'description' + id_num : desc, 'imageUrl' + id_num : img}
 
             lang_dict = resources_dict[id_lang]
@@ -40,14 +41,14 @@ def convert(f_in, f_out):
             #data = {'resources':[{'name': 'Scott', 'website': 'stackabuse.com', 'from': 'Nebraska'}]}
             data = {'resources':{'name': 'Scott', 'website': 'stackabuse.com', 'from': 'Nebraska'}}
             #print(json.dumps(data, indent=4))
-            json.dump(resources_dict, json_file, indent=4)
+            json.dump({'resources': resources_dict}, json_file, indent=4)
 
 
 
 if __name__ == "__main__":
     # Check for args
     if len(sys.argv) < 3:
-        print("Please give input and output filename.")
+        print("Run with: \"python3 csv_to_content_data.py data/ifile.csv data/out.txt\"")
         sys.exit()
     # Read input args
     f_in = sys.argv[1]
