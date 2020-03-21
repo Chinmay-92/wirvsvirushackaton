@@ -7,47 +7,35 @@ import CustomListview from '../components/CustomListview'
 
 import { MonoText } from '../components/StyledText';
 
-function getData() {
-  return [
-    {
-      key: 1, title: 'Albert Einstein',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-      image_url: 'http://vivirtupasion.com/wp-content/uploads/2016/05/DANI_PERFILzoomCircle.png'
-    },
-    {
-      key: 2,
-      title: 'Isaac newton',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-      image_url: 'http://3.bp.blogspot.com/-jd5x3rFRLJc/VngrSWSHcjI/AAAAAAAAGJ4/ORPqZNDpQoY/s1600/Profile%2Bcircle.png'
-    },
-    {
-      key: 3, title: 'Albert Einstein',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-      image_url: 'http://vivirtupasion.com/wp-content/uploads/2016/05/DANI_PERFILzoomCircle.png'
-    },
-    {
-      key: 4,
-      title: 'Isaac newton',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-      image_url: 'http://3.bp.blogspot.com/-jd5x3rFRLJc/VngrSWSHcjI/AAAAAAAAGJ4/ORPqZNDpQoY/s1600/Profile%2Bcircle.png'
-    },
-    {
-      key: 5,
-      title: 'Isaac newton',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-      image_url: 'http://3.bp.blogspot.com/-jd5x3rFRLJc/VngrSWSHcjI/AAAAAAAAGJ4/ORPqZNDpQoY/s1600/Profile%2Bcircle.png'
-    },
-    {
-      key: 6,
-      title: 'Isaac newton',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-      image_url: 'http://3.bp.blogspot.com/-jd5x3rFRLJc/VngrSWSHcjI/AAAAAAAAGJ4/ORPqZNDpQoY/s1600/Profile%2Bcircle.png'
-    }
-  ]
-}
+
 
 export default function HomeScreen() {
   const { t, i18n } = useTranslation();
+
+  function getData() {
+    return [
+      {
+        key: 1, title: t('title1'),
+        description: t('description1'),
+        image_url: t('imageUrl1')
+      },
+      {
+        key: 2, title: t('title2'),
+        description: t('description2'),
+        image_url: t('imageUrl2')
+      },
+      {
+        key: 3, title: t('title3'),
+        description: t('description3'),
+        image_url: t('imageUrl3')
+      },
+      {
+        key: 4, title: t('title4'),
+        description: t('description4'),
+        image_url: t('imageUrl5')
+      }
+    ]
+  }
 
   const changeLanguage = lng => {
     i18n.changeLanguage(lng);
@@ -58,16 +46,16 @@ export default function HomeScreen() {
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
 
         <View style={styles.buttonMainContainer}>
-          <View style={styles.buttonContainer}>
+          <View key="1" style={styles.buttonContainer}>
             <Button onPress={() => changeLanguage("de")} title={t("DE")} />
           </View>
-          <View style={styles.buttonContainer}>
+          <View key="2" style={styles.buttonContainer}>
             <Button onPress={() => changeLanguage("en")} title={t("EN")} />
           </View>
         </View>
 
-        <View style={styles.getStartedContainer}>
-          <Text style={styles.textstyleHeading}>
+        {/*  <Text>
+         <View style={styles.getStartedContainer}>
             <Trans>
               {t("Welcome Message")}
             </Trans>
@@ -83,7 +71,7 @@ export default function HomeScreen() {
             }
             style={styles.welcomeImage}
           />
-        </View>
+        </View> */}
 
         
         <CustomListview style={styles.textstyleNormal}
@@ -166,7 +154,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   contentContainer: {
-    paddingTop: 30,
+    paddingTop: 5,
   },
   welcomeContainer: {
     alignItems: 'center',
@@ -251,13 +239,12 @@ const styles = StyleSheet.create({
   // },
   buttonMainContainer: {
     width: 200,
-    height: 100,
+    height: 50,
     margin: 10,
     flexDirection: 'row',
     alignItems: 'center'
   },
   buttonContainer: {
-    flex: 1,
   }
   
 });
