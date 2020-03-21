@@ -33,16 +33,16 @@ def convert(f_in, f_out):
             # Build the inner content added to the dict
             line_content_dict = {'title' + id_num : title, 'description' + id_num : desc, 'imageUrl' + id_num : img}
 
+            # Add the inner content to a language specific dict
             lang_dict = resources_dict[id_lang]
             lang_dict['translations'].update(line_content_dict)
 
-        # Write JSON
+        # Write JSON outfile
         with open(f_out, 'w') as json_file:
             #data = {'resources':[{'name': 'Scott', 'website': 'stackabuse.com', 'from': 'Nebraska'}]}
             data = {'resources':{'name': 'Scott', 'website': 'stackabuse.com', 'from': 'Nebraska'}}
             #print(json.dumps(data, indent=4))
             json.dump({'resources': resources_dict}, json_file, indent=4)
-
 
 
 if __name__ == "__main__":
