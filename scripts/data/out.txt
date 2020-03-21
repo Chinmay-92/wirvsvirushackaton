@@ -1,0 +1,22 @@
+{
+    "en": {
+        "translations": {
+            "title1": "my first entry",
+            "description1": "this is a text\n-this is a bullet point\n-and this also",
+            "imageUrl1": "/dev/null",
+            "title2": "my second entry",
+            "description2": "",
+            "imageUrl2": "/dev/x"
+        }
+    },
+    "de": {
+        "translations": {
+            "title1": "Der erste Eintrag",
+            "description1": "Das ist auch ein Text",
+            "imageUrl1": "/dev/null",
+            "title2": "Der zweite Eintrag",
+            "description2": "Das ist ein anderer Text",
+            "imageUrl2": "/dev/x"
+        }
+    }
+}
