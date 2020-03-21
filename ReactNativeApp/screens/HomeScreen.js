@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Platform, Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
 import { useTranslation, Trans } from "react-i18next";
@@ -21,9 +21,27 @@ function getData() {
       image_url: 'http://3.bp.blogspot.com/-jd5x3rFRLJc/VngrSWSHcjI/AAAAAAAAGJ4/ORPqZNDpQoY/s1600/Profile%2Bcircle.png'
     },
     {
-      key: 1, title: 'Albert Einstein',
+      key: 3, title: 'Albert Einstein',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
       image_url: 'http://vivirtupasion.com/wp-content/uploads/2016/05/DANI_PERFILzoomCircle.png'
+    },
+    {
+      key: 4,
+      title: 'Isaac newton',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+      image_url: 'http://3.bp.blogspot.com/-jd5x3rFRLJc/VngrSWSHcjI/AAAAAAAAGJ4/ORPqZNDpQoY/s1600/Profile%2Bcircle.png'
+    },
+    {
+      key: 5,
+      title: 'Isaac newton',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+      image_url: 'http://3.bp.blogspot.com/-jd5x3rFRLJc/VngrSWSHcjI/AAAAAAAAGJ4/ORPqZNDpQoY/s1600/Profile%2Bcircle.png'
+    },
+    {
+      key: 6,
+      title: 'Isaac newton',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+      image_url: 'http://3.bp.blogspot.com/-jd5x3rFRLJc/VngrSWSHcjI/AAAAAAAAGJ4/ORPqZNDpQoY/s1600/Profile%2Bcircle.png'
     }
   ]
 }
@@ -38,10 +56,24 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-        <div className="App-header">
-          <button onClick={() => changeLanguage("de")}>de</button>
-          <button onClick={() => changeLanguage("en")}>en</button>
-        </div>
+
+        <View style={styles.buttonMainContainer}>
+          <View style={styles.buttonContainer}>
+            <Button onPress={() => changeLanguage("de")} title={t("DE")} />
+          </View>
+          <View style={styles.buttonContainer}>
+            <Button onClick={() => changeLanguage("en")} title={t("EN")} />
+          </View>
+        </View>
+
+        <View style={styles.getStartedContainer}>
+          <Text>
+            <Trans>
+              {t("Willkommen bei FoodMatching App.")}
+            </Trans>
+          </Text>
+        </View>
+
         <View style={styles.welcomeContainer}>
           <Image
             source={
@@ -51,14 +83,6 @@ export default function HomeScreen() {
             }
             style={styles.welcomeImage}
           />
-        </View>
-
-        <View style={styles.getStartedContainer}>
-          <DevelopmentModeNotice />
-          <Trans>
-            Welcome Message
-          </Trans>
-
         </View>
 
         <CustomListview
@@ -72,13 +96,13 @@ export default function HomeScreen() {
         </View> */}
       </ScrollView>
 
-      <View style={styles.tabBarInfoContainer}>
+      {/* <View style={styles.tabBarInfoContainer}>
         <Text style={styles.tabBarInfoText}>Footer for menus or links</Text>
-        {/*
+        
         <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
           <MonoText style={styles.codeHighlightText}>navigation/BottomTabNavigator.js</MonoText>
-        </View> */}
-      </View>
+        </View>
+      </View> */}
     </View>
   );
 }
@@ -149,7 +173,7 @@ const styles = StyleSheet.create({
   },
   getStartedContainer: {
     alignItems: 'center',
-    marginHorizontal: 50,
+    marginHorizontal: 20,
   },
   homeScreenFilename: {
     marginVertical: 7,
@@ -207,4 +231,20 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#2e78b7',
   },
+  // buttonMainContainer: {
+  //   flex: 1,
+  //   flexDirection: 'row',
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  // },
+  buttonMainContainer: {
+    width: 200,
+    height: 100,
+    margin: 10,
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  buttonContainer: {
+    flex: 1,
+  }
 });

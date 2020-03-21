@@ -60,9 +60,8 @@ function handleHelpPress() {
 
 const CustomRow = ({ title, description, image_url }) => (
     <View style={styles.container}>
-        <Image source={{ uri: image_url }} style={styles.photo} >
-        </Image>
-        <View style={styles.container_text}>
+
+<View style={styles.container_text}>
             <View style={styles.mainContainer}>
                 <Text style={styles.title}>
                     {title}
@@ -77,10 +76,10 @@ const CustomRow = ({ title, description, image_url }) => (
                 </TouchableOpacity>
             </View>
         </View>
+        <Image source={{ uri: image_url }} style={styles.photo} >
+        </Image>
 
     </View>
 );
-
-
 
 export default CustomRow;

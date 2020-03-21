@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, ListView, FlatList, StyleSheet, Text } from 'react-native';
+import { View, ListView, FlatList, TouchableOpacity, StyleSheet, Text } from 'react-native';
 import CustomRow from './CustomRow';
+import CustomRowRight from './CustomRowRight';
 
 const styles = StyleSheet.create({
     container: {
@@ -12,13 +13,21 @@ const styles = StyleSheet.create({
 const CustomListview = ({ itemList }) => (
     <View style={styles.container}>
         <FlatList
-                data={itemList}
-                renderItem={({ item }) => <CustomRow
-                    title={item.title}
-                    description={item.description}
-                    image_url={item.image_url}
-                />}
-            />
+            data={itemList}
+            renderItem={({ item }) =>
+                (item.key % 2) ?
+                    <CustomRow
+                        title={item.title}
+                        description={item.description}
+                        image_url={item.image_url}
+                    /> :
+                    <CustomRowRight
+                        title={item.title}
+                        description={item.description}
+                        image_url={item.image_url}
+                    />
+            }
+        />
 
     </View>
 );

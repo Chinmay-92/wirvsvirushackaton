@@ -2,23 +2,35 @@ import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
+const languageDetector = {
+    type: 'languageDetector',
+    async: true,
+    detect: cb => cb('de'),
+    init: () => {},
+    cacheUserLanguage: () => {},
+  };
+
 i18n
-    .use(LanguageDetector)
+    .use(languageDetector)
     .use(initReactI18next)
     .init({
         resources: {
             en: {
                 translations: {
-                    "Welcome Message": "Welcome to FoodMatching App.",
+                    "Willkommen bei FoodMatching App.": "Welcome to FoodMatching App.",
                     "Corona FAQs": "Here you can find frequently asked questions",
-                    welcome: "Hello, <br/> <strong>Welcome</strong>"
+                    "welcome": "Hello, <br/> <strong>Welcome</strong>",
+                    "EN": "English",
+                    "DE": "German"
                 }
             },
             de: {
                 translations: {
-                    "Welcome Message": "Willkommen bei FoodMatching App.",
+                    "Willkommen bei FoodMatching App.": "Willkommen bei FoodMatching App.",
                     "Corona FAQs": "Hier finden Sie häufig gestellte Fragen",
-                    welcome: "Hello, <br/> <strong>Willkommen</strong>"
+                    "welcome": "Hello, <br/> <strong>Willkommen</strong>",
+                    "EN": "Englisch",
+                    "DE": "Deutsch"
                 }
             }
         },
