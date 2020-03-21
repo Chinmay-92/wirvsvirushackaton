@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 10,
     marginBottom: 20,
-    backgroundColor:'#00FFFF',
+   
   },
   welcomeImage: {
     width: 100,
