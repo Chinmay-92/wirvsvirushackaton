@@ -19,7 +19,7 @@ export default function BottomTabNavigator({ navigation, route }) {
     tabBarOptions={{
         activeBackgroundColor: '#00FFFF',
         inactiveBackgroundColor: '#00FFFF',
-        activeTintColor:'white',
+        activeTintColor:'Black',
         inactiveTintColor:'Blue'
       }}>
 
