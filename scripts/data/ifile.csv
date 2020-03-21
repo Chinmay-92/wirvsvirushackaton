@@ -1,0 +1,7 @@
+id;title;description;image
+1:en;my first entry;"this is a text
+-this is a bullet point
+-and this also";/dev/null
+1:de;Der erste Eintrag;Das ist auch ein Text;/dev/null
+2:en;my second entry;;/dev/x
+2:de;Der zweite Eintrag;Das ist ein anderer Text;/dev/x

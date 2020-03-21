@@ -27,6 +27,7 @@ const CustomListview = ({ itemList }) => (
                         image_url={item.image_url}
                     />
             }
+            keyExtractor =  { (item, index) => index.toString() }
         />
 
     </View>
