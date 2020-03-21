@@ -17,7 +17,7 @@ i18n
         resources: {
             en: {
                 translations: {
-                    "Willkommen bei FoodMatching App.": "Welcome to FoodMatching App.",
+                    "Welcome Message": "Welcome to FoodMatching App.",
                     "Corona FAQs": "Here you can find frequently asked questions",
                     "welcome": "Hello, <br/> <strong>Welcome</strong>",
                     "EN": "English",
@@ -26,7 +26,7 @@ i18n
             },
             de: {
                 translations: {
-                    "Willkommen bei FoodMatching App.": "Willkommen bei FoodMatching App.",
+                    "Welcome Message": "Willkommen bei FoodMatching App.",
                     "Corona FAQs": "Hier finden Sie häufig gestellte Fragen",
                     "welcome": "Hello, <br/> <strong>Willkommen</strong>",
                     "EN": "Englisch",
@@ -35,7 +35,7 @@ i18n
             }
         },
         fallbackLng: "de",
-        debug: true,
+        debug: false,
 
         // have a common namespace used around the full app
         ns: ["translations"],
