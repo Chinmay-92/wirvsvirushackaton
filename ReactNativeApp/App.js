@@ -8,6 +8,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import useLinking from './navigation/useLinking';
+import i18n from "./i18n";
 
 const Stack = createStackNavigator();
 

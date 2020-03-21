@@ -2,13 +2,46 @@ import * as React from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
+import { useTranslation, Trans } from "react-i18next";
+import CustomListview from '../components/CustomListview'
 
 import { MonoText } from '../components/StyledText';
 
+function getData() {
+  return [
+    {
+      key: 1, title: 'Albert Einstein',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+      image_url: 'http://vivirtupasion.com/wp-content/uploads/2016/05/DANI_PERFILzoomCircle.png'
+    },
+    {
+      key: 2,
+      title: 'Isaac newton',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+      image_url: 'http://3.bp.blogspot.com/-jd5x3rFRLJc/VngrSWSHcjI/AAAAAAAAGJ4/ORPqZNDpQoY/s1600/Profile%2Bcircle.png'
+    },
+    {
+      key: 1, title: 'Albert Einstein',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+      image_url: 'http://vivirtupasion.com/wp-content/uploads/2016/05/DANI_PERFILzoomCircle.png'
+    }
+  ]
+}
+
 export default function HomeScreen() {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = lng => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+        <div className="App-header">
+          <button onClick={() => changeLanguage("de")}>de</button>
+          <button onClick={() => changeLanguage("en")}>en</button>
+        </div>
         <View style={styles.welcomeContainer}>
           <Image
             source={
@@ -22,31 +55,29 @@ export default function HomeScreen() {
 
         <View style={styles.getStartedContainer}>
           <DevelopmentModeNotice />
+          <Trans>
+            Welcome Message
+          </Trans>
 
-          <Text style={styles.getStartedText}>Open up the code for this screen:</Text>
-
-          <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-            <MonoText>screens/HomeScreen.js</MonoText>
-          </View>
-
-          <Text style={styles.getStartedText}>
-            Change any of the text, save the file, and your app will automatically reload.
-          </Text>
         </View>
 
-        <View style={styles.helpContainer}>
+        <CustomListview
+          itemList={getData()}
+        />
+
+        {/* <View style={styles.helpContainer}>
           <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
             <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
           </TouchableOpacity>
-        </View>
+        </View> */}
       </ScrollView>
 
       <View style={styles.tabBarInfoContainer}>
-        <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
-
+        <Text style={styles.tabBarInfoText}>Footer for menus or links</Text>
+        {/*
         <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
           <MonoText style={styles.codeHighlightText}>navigation/BottomTabNavigator.js</MonoText>
-        </View>
+        </View> */}
       </View>
     </View>
   );
