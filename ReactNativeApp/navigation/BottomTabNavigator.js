@@ -11,12 +11,24 @@ export default function BottomTabNavigator({ navigation, route }) {
   // Set the header title on the parent stack navigator depending on the
   // currently active tab. Learn more in the documentation:
   // https://reactnavigation.org/docs/en/screen-options-resolution.html
-  navigation.setOptions({ headerTitle: getHeaderTitle(route) });
-
+  navigation.setOptions({ headerTitle: getHeaderTitle(route),
+    headerStyle: {
+      backgroundColor: '#00FFFF'
+    },});
+  
   return (
-    <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
+    <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}
+  
+    tabBarOptions={{
+        activeBackgroundColor: '#00FFFF',
+        inactiveBackgroundColor: '#00FFFF',
+        activeTintColor:'Black',
+        inactiveTintColor:'Blue'
+      }}>
+
+
       <BottomTab.Screen
-        name="Home"
+             name="Home"
         component={HomeScreen}
         options={{
           title: 'Home',

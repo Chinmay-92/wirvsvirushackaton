@@ -67,7 +67,7 @@ export default function HomeScreen() {
         </View>
 
         <View style={styles.getStartedContainer}>
-          <Text>
+          <Text style={styles.textstyleHeading}>
             <Trans>
               {t("Welcome Message")}
             </Trans>
@@ -85,7 +85,8 @@ export default function HomeScreen() {
           />
         </View>
 
-        <CustomListview
+        
+        <CustomListview style={styles.textstyleNormal}
           itemList={getData()}
         />
 
@@ -145,6 +146,14 @@ function handleHelpPress() {
 }
 
 const styles = StyleSheet.create({
+
+  textstyleHeading: {
+    fontSize: 23,
+  },
+
+  textstyleNormal: {
+    fontSize: 19,
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -163,6 +172,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 10,
     marginBottom: 20,
+   
   },
   welcomeImage: {
     width: 100,
@@ -174,6 +184,8 @@ const styles = StyleSheet.create({
   getStartedContainer: {
     alignItems: 'center',
     marginHorizontal: 20,
+    textAlign: 'center',
+    fontSize:24,
   },
   homeScreenFilename: {
     marginVertical: 7,
@@ -203,7 +215,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: -3 },
         shadowOpacity: 0.1,
         shadowRadius: 3,
-      },
+              },
       android: {
         elevation: 20,
       },
@@ -247,4 +259,5 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flex: 1,
   }
+  
 });
