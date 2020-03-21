@@ -62,14 +62,14 @@ export default function HomeScreen() {
             <Button onPress={() => changeLanguage("de")} title={t("DE")} />
           </View>
           <View style={styles.buttonContainer}>
-            <Button onClick={() => changeLanguage("en")} title={t("EN")} />
+            <Button onPress={() => changeLanguage("en")} title={t("EN")} />
           </View>
         </View>
 
         <View style={styles.getStartedContainer}>
           <Text>
             <Trans>
-              {t("Willkommen bei FoodMatching App.")}
+              {t("Welcome Message")}
             </Trans>
           </Text>
         </View>
