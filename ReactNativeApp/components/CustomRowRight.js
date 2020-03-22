@@ -7,10 +7,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-<<<<<<< HEAD
-=======
-        alignItems: "center",
->>>>>>> 33f09da02183b001259c47c0cfa8752bb02c8e7a
         padding: 10,
         marginLeft: 16,
         marginRight: 16,
