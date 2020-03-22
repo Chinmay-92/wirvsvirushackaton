@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 18,
         fontStyle: "normal",
-        color: '#000',
+        color: 'red',
     },
     container_text: {
         flex: 1,
@@ -71,11 +71,11 @@ const CustomRow = ({ title, description, image_url }) => (
                     {description}
                 </Text>
             </View>
-            <View style={styles.helpContainer}>
+            {/* <View style={styles.helpContainer}>
                 <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
                     <Text style={styles.helpLinkText}>See more!</Text>
                 </TouchableOpacity>
-            </View>
+            </View> */}
         </View>
         <Image source={{ uri: "https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_go_shopping.png?alt=media&token=8ca3f6b5-2d2e-4607-b0ed-5333764f3695" }} //image_url }} 
         style={styles.photo} >
