@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "FoodMatching",
-    "slug": "FoodMatchingRNative",
+    "name": "VersorgungVsVirus",
+    "slug": "VersorgungVsVirus",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
