@@ -10,22 +10,26 @@ function getData(t) {
     {
       key: 1, title: t('title1'),
       description: t('description1'),
-      image_url: t('imageUrl1')
+      image_url: t('imageUrl1'),
+      sub_url: t('subUrl1')
     },
     {
       key: 2, title: t('title2'),
       description: t('description2'),
-      image_url: t('imageUrl2')
+      image_url: t('imageUrl2'),
+      sub_url: t('subUrl2')
     },
     {
       key: 3, title: t('title3'),
       description: t('description3'),
-      image_url: t('imageUrl3')
+      image_url: t('imageUrl3'),
+      sub_url: t('subUrl3')
     },
     {
       key: 4, title: t('title4'),
       description: t('description4'),
-      image_url: t('imageUrl5')
+      image_url: t('imageUrl4'),
+      sub_url: t('subUrl4')
     }
   ]
 }

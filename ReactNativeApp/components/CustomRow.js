@@ -22,15 +22,14 @@ const styles = StyleSheet.create({
         textAlign: "left",
         fontStyle: "normal",
         color: 'blue',
-        marginBottom:10,
+        marginBottom: 10,
     },
     container_text: {
         flex: 1,
         flexDirection: 'row',
         marginLeft: 12,
         justifyContent: 'center',
-        marginTop:5,
-        
+        marginTop: 5,
     },
     description: {
         fontSize: 11,
@@ -66,21 +65,27 @@ function handleHelpPress() {
     );
 }
 
-const CustomRow = ({ title, description, image_url }) => (
+const CustomRow = ({ title, description, image_url, sub_url }) => (
     <View style={styles.container}>
-        <Image source={{ uri: image_url }} style={styles.photo} >
-        </Image>
         <View style={styles.container_text}>
             <View style={styles.mainContainer}>
                 <Text style={styles.title}>
                     {title}
                 </Text>
+                {image_url !== "" ?
+                    <Image source={{ uri: image_url }} style={styles.photo} />
+                    : <View />}
                 <Text style={styles.description}>
                     {description}
                 </Text>
-                {/* <WebView
-                    originWhitelist={['*']}
-                    source={{ html: '<p>`${description}`</p>' }} /> */}
+                {sub_url ? <View style={styles.helpContainer}>
+                    <TouchableOpacity onPress={openLink(sub_url)} style={styles.helpLink}>
+                        <Text style={styles.helpLinkText}>
+                            {sub_url}
+                        </Text>
+                    </TouchableOpacity>
+                </View>
+                    : <View />}
             </View>
             {/* <View style={styles.helpContainer}>
                 <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
@@ -92,6 +97,8 @@ const CustomRow = ({ title, description, image_url }) => (
     </View>
 );
 
-
+function openLink(url) {
+    WebBrowser.openBrowserAsync(url);
+}
 
 export default CustomRow;
