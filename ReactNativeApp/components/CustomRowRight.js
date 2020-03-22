@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     description: {
-        fontSize: 11,
+        fontSize: 14,
         fontStyle: 'italic',
     },
     photo: {
@@ -50,8 +50,15 @@ const styles = StyleSheet.create({
     helpLinkText: {
         fontSize: 14,
         color: '#2e78b7',
-    }
-});
+    },
+//Style for Icons
+    iconContainer: {
+    height:50,
+    width:50,
+    justifyContent:'center',
+    marginTop: 5,
+}});
+
 
 function handleHelpPress() {
     WebBrowser.openBrowserAsync(
