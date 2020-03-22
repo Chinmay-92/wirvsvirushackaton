@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import { BorderlessButton } from 'react-native-gesture-handler';
+import { WebView } from 'react-native-webview';
 import * as WebBrowser from 'expo-web-browser';
 
 const styles = StyleSheet.create({
@@ -18,8 +18,9 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 18,
+        textAlign: "left",
         fontStyle: "normal",
-        color: '#000',
+        color: 'blue',
     },
     container_text: {
         flex: 1,
@@ -71,6 +72,9 @@ const CustomRow = ({ title, description, image_url }) => (
                 <Text style={styles.description}>
                     {description}
                 </Text>
+                {/* <WebView
+                    originWhitelist={['*']}
+                    source={{ html: '<p>`${description}`</p>' }} /> */}
             </View>
             {/* <View style={styles.helpContainer}>
                 <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>

@@ -16,31 +16,32 @@ export default function BottomTabNavigator({ navigation, route }) {
 
   return (
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}
-        
-    tabBarOptions={{
+
+      tabBarOptions={{
         activeBackgroundColor: '#00FFFF',
         inactiveBackgroundColor: '#00FFFF',
-        activeTintColor:'Black',
-        inactiveTintColor:'Blue',
+        activeTintColor: 'blue',
+        inactiveTintColor: 'black',
         labelStyle: {
           fontSize: 18,
-             }}}>
+        }
+      }}>
 
 
       <BottomTab.Screen
-        
+
         name="Home"
         component={HomeScreen}
         options={{
-          title: 'Home',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
-          }}
+          title: 'Section 1',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-home" />,
+        }}
       />
       <BottomTab.Screen
-        name="FAQs"
+        name="Links"
         component={LinksScreen}
         options={{
-          title: 'FAQs',
+          title: 'Section 2',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
         }}
       />
@@ -53,14 +54,14 @@ function getHeaderTitle(route) {
 
   switch (routeName) {
     case 'Home':
-      return 'Home';
+      return 'Corona FAQs';
     case 'Links':
-      return 'FAQs';
+      return 'Corona FAQs';
   }
 }
 
 const styles = StyleSheet.create({
-  text:{
+  text: {
     fontSize: 50,
   }
 })

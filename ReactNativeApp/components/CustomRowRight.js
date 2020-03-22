@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 18,
         fontStyle: "normal",
-        color: '#000',
+        color: 'red',
     },
     container_text: {
         flex: 1,

@@ -1,74 +1,211 @@
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import * as WebBrowser from 'expo-web-browser';
-import { RectButton, ScrollView } from 'react-native-gesture-handler';
+import { useState, useEffect } from 'react';
+import { Platform, Button, StyleSheet, Text, View } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import { useTranslation, Trans } from "react-i18next";
+import CustomListview from '../components/CustomListview'
+
+function getData(t) {
+  return [
+    {
+      key: 1, title: t('title1'),
+      description: t('description1'),
+      image_url: t('imageUrl1')
+    },
+    {
+      key: 2, title: t('title2'),
+      description: t('description2'),
+      image_url: t('imageUrl2')
+    },
+    {
+      key: 3, title: t('title3'),
+      description: t('description3'),
+      image_url: t('imageUrl3')
+    },
+    {
+      key: 4, title: t('title4'),
+      description: t('description4'),
+      image_url: t('imageUrl5')
+    }
+  ]
+}
 
 export default function LinksScreen() {
+  let [faqData, setfaqData] = useState([]);
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = lng => {
+    i18n.changeLanguage(lng);
+    const fetchData = async () => {
+      try {
+        const response = await getData(t);
+        setfaqData(response)
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    fetchData()
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await getData(t);
+        setfaqData(response)
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    fetchData()
+  }
+    , []);
+
+  const renderFields = () => {
+    if (faqData != {}) {
+
+      return (
+        <CustomListview
+          itemList={faqData}
+        />
+      )
+    }
+    return ""
+  }
+
   return (
-    <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-      <OptionButton
-        icon="md-school"
-        label="Read the Expo documentation"
-        onPress={() => WebBrowser.openBrowserAsync('https://docs.expo.io')}
-      />
+    <View style={styles.container}>
+      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
 
-      <OptionButton
-        icon="md-compass"
-        label="Read the React Navigation documentation"
-        onPress={() => WebBrowser.openBrowserAsync('https://reactnavigation.org')}
-      />
+        <View key="1" style={styles.buttonMainContainer}>
 
-      <OptionButton
-        icon="ios-chatboxes"
-        label="Ask a question on the forums"
-        onPress={() => WebBrowser.openBrowserAsync('https://forums.expo.io')}
-        isLastOption
-      />
-    </ScrollView>
+          <View style={styles.buttonContainer}>
+            <Button onPress={() => changeLanguage("de")} title={t("DE")} />
+          </View>
+          <View style={styles.buttonContainer}>
+            <Button onPress={() => changeLanguage("en")} title={t("EN")} />
+          </View>
+        </View>
+
+        <View key="2">
+          {renderFields()}
+        </View>
+
+      </ScrollView>
+
+    </View>
   );
 }
 
-function OptionButton({ icon, label, onPress, isLastOption }) {
-  return (
-    <RectButton style={[styles.option, isLastOption && styles.lastOption]} onPress={onPress}>
-      <View style={{ flexDirection: 'row' }}>
-        <View style={styles.optionIconContainer}>
-          <Ionicons name={icon} size={22} color="rgba(0,0,0,0.35)" />
-        </View>
-        <View style={styles.optionTextContainer}>
-          <Text style={styles.optionText}>{label}</Text>
-        </View>
-      </View>
-    </RectButton>
-  );
-}
+LinksScreen.navigationOptions = {
+  header: null,
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fafafa',
+    backgroundColor: '#fff',
+  },
+  developmentModeText: {
+    marginBottom: 20,
+    color: 'rgba(0,0,0,0.4)',
+    fontSize: 14,
+    lineHeight: 19,
+    textAlign: 'center',
   },
   contentContainer: {
-    //paddingTop: 15,
+
   },
-  optionIconContainer: {
-    marginRight: 12,
+  welcomeContainer: {
+    alignItems: 'center',
+    marginTop: 10,
+    marginBottom: 20,
   },
-  option: {
-    backgroundColor: '#fdfdfd',
-    paddingHorizontal: 15,
+  welcomeImage: {
+    width: 100,
+    height: 80,
+    resizeMode: 'contain',
+    marginTop: 3,
+    marginLeft: -10,
+  },
+  getStartedContainer: {
+    alignItems: 'center',
+    marginHorizontal: 20,
+  },
+  homeScreenFilename: {
+    marginVertical: 7,
+  },
+  codeHighlightText: {
+    color: 'rgba(96,100,109, 0.8)',
+  },
+  codeHighlightContainer: {
+    backgroundColor: 'rgba(0,0,0,0.05)',
+    borderRadius: 3,
+    paddingHorizontal: 4,
+  },
+  getStartedText: {
+    fontSize: 17,
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: 24,
+    textAlign: 'center',
+  },
+  tabBarInfoContainer: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    ...Platform.select({
+      ios: {
+        shadowColor: 'black',
+        shadowOffset: { width: 0, height: -3 },
+        shadowOpacity: 0.1,
+        shadowRadius: 3,
+      },
+      android: {
+        elevation: 20,
+      },
+    }),
+    alignItems: 'center',
+    backgroundColor: '#fbfbfb',
+    paddingVertical: 20,
+  },
+  tabBarInfoText: {
+    fontSize: 17,
+    color: 'rgba(96,100,109, 1)',
+    textAlign: 'center',
+  },
+  navigationFilename: {
+    marginTop: 5,
+  },
+  helpContainer: {
+    marginTop: 15,
+    alignItems: 'center',
+  },
+  helpLink: {
     paddingVertical: 15,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderBottomWidth: 0,
-    borderColor: '#ededed',
   },
-  lastOption: {
-    borderBottomWidth: StyleSheet.hairlineWidth,
+  helpLinkText: {
+    fontSize: 14,
+    color: '#2e78b7',
   },
-  optionText: {
-    fontSize: 15,
-    alignSelf: 'flex-start',
-    marginTop: 1,
+  flagContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
   },
+  buttonMainContainer: {
+    width: 200,
+    height: 100,
+    margin: 10,
+    marginTop: -20,
+    marginBottom: -20,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  buttonContainer: {
+    flex: 1,
+  }
 });

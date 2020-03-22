@@ -2,10 +2,8 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { Platform, Button, StyleSheet, Text, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import * as WebBrowser from 'expo-web-browser';
 import { useTranslation, Trans } from "react-i18next";
 import CustomListview from '../components/CustomListview'
-import Flag from 'react-native-flags';
 
 function getData(t) {
   return [
@@ -84,10 +82,10 @@ export default function HomeScreen() {
         <View key="1" style={styles.buttonMainContainer}>
 
           <View style={styles.buttonContainer}>
-            <Button onPress={() => changeLanguage("de")} title={t("DE")} />
+            <Button color="white" onPress={() => changeLanguage("de")} title={t("DE")} />
           </View>
           <View style={styles.buttonContainer}>
-            <Button onPress={() => changeLanguage("en")} title={t("EN")} />
+            <Button color="white" onPress={() => changeLanguage("en")} title={t("EN")} />
           </View>
         </View>
 
@@ -199,14 +197,28 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     justifyContent: 'space-between',
   },
+  // buttonMainContainer: {
+  //   width: 200,
+  //   height: 100,
+  //   margin: 10,
+  //   marginLeft: 100,
+  //   marginTop: -20,
+  //   marginBottom: -20,
+  //   flexDirection: 'row',
+  //   alignItems: 'center',
+  // },
   buttonMainContainer: {
+    marginRight: 40,
     width: 200,
-    height: 100,
-    margin: 10,
-    marginTop: -20,
-    marginBottom: -20,
+    height: 40,
+    marginRight: 20,
+    marginLeft: 100,
+    margin: 2,
     flexDirection: 'row',
-    alignItems: 'center',
+    backgroundColor: '#68a0cf',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#fff'
   },
   buttonContainer: {
     flex: 1,
