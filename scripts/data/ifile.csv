@@ -1,4 +1,6 @@
 id;title;description;image;suburl
+0:de;Versorgung vs Virus: Die Idee;In Zeiten der Corona-Pandemie kommt es zu vielen notwendigen Einschränkungen im Alltag, die helfen sollen das Infektionsrisiko und die Ausbreitung des Virus zu minimieren. Die meisten Orte kann man meiden und Tätigkeiten verschieben, doch jeder muss früher oder später einkaufen gehen.  Im Supermarkt lässt es sich weder vermeiden fremden Leuten zu begegnen, noch sich mit diesen in einem Raum aufzuhalten . Es ist daher für alle Beteiligten wichtig, sich in diesen Situationen angemessen  zu verhalten, um das Einkaufserlebnis so stress- und risikofrei wie möglich zu gestalten. Wir haben für euch einige nützliche Tipps und Infos zusammengestellt, die euch und anderen beim Einkauf in Zeiten der Pandemie helfen können.;https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_go_shopping.png?alt=media&token=8ca3f6b5-2d2e-4607-b0ed-5333764f3695;
+0:en;Versorgung vs Virus: The idea;Everyone has to deal with many necessary precautions in our everyday life during the Corona-pandemic, to minimize the risk of infection and the spread of the virus. While there are many things and places you can avoid to help with this, everyone needs to get groceries eventually.  In the supermarket you can’t really help being around strangers. So, to make this as pleasant of an experience as possible for everyone, it is important to be aware of how we act in this shared space, while we shop. We put together a list of useful tips and infos, to make your trip to the supermarket during this pandemic a little less frustrating and a little safer for everyone.;https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_go_shopping.png?alt=media&token=8ca3f6b5-2d2e-4607-b0ed-5333764f3695;
 1:en;Your extra layer of security;"/-Use single-use gloves to pick up items from shelves
 /-Do not reuse gloves and do not touch your face, the area around your eyes, or your nose with them
 /-You do not have gloves? Use the small plastic bags for fruits and vegetables instead. Again: Do not touch your skin or face with them.";https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_wear_gloves.png?alt=media&token=46ac2b21-1c22-4d54-a960-02e7ab9b561f;https://www.youtube.com/watch?v=xueBYfElFEg
@@ -9,7 +11,7 @@ id;title;description;image;suburl
 2:en;Night owl or early bird? Be both;"/-Infection risk increases in crowded areas
 /-Try to avoid trips to the supermarket during rush hours
 /-Are you encountering too many people? Go for a short walk and check again afterwards";https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_Layout-Time.png?alt=media&token=1ede6536-9f44-4b6f-85b1-2006599fc423;Link to time slot management app
-2:de;Frï¿½her Vogel oder Nachteule? Beides gut!;"/-Aufenthalte in grï¿½ï¿½ere Menschenmengen erhï¿½hen das Infektionsrisiko
+2:de;Frï¿½her Vogel oder Nachteule? Beides gut!;"/-Aufenthalte in größere Menschenmengen erhöhen das Infektionsrisiko
 /-Versuche deinen Einkauf auï¿½erhalb von Stoï¿½zeiten zu machen
 /-Sollte es zu voll sein, nutz die Zeit und geh eine Runde spazieren, um dem Ansturm zu entgehen";https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_Layout-Time.png?alt=media&token=1ede6536-9f44-4b6f-85b1-2006599fc423;Link to time slot management app
 3:en;Choose wisely!;"/-Stand back before choosing goods
@@ -18,14 +20,18 @@ id;title;description;image;suburl
 3:de;Triff deine Wahl!;"/-Gehe nicht zu nah an die Lebensmitteln heran solange du aussuchst
 /-Such dir dein liebstes Lebensmittel aus bevor du es anfasst. Was du in die Hand nimmst Sollte nicht zurï¿½ck ins Regal kommen
 /-Einer nach dem anderen: Achte auf Abstand zu deinen Mitmenschen";https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_pick_products.png?alt=media&token=bb09e758-2799-4019-ab3b-3f22e897d4c7;
-4:de;Bist du an der Kasse?;"/-Bezahle bargeldlos wenn immer mï¿½glich (EC / Kreditkarte / Handy)
-/-Schï¿½tze die Kassierer*innen und bleib hinter der Scheibe ";;
+4:de;Bist du an der Kasse?;"/-Bezahle bargeldlos wenn immer möglich (EC / Kreditkarte / Handy)
+/-Schütze die Kassierer*innen und bleib hinter der Scheibe ";https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_pay_contactless-10.png?alt=media&token=bdfa2a1e-dab5-410f-ac7f-2375472fb960;
 4:en;Are you at the counter?;"/-Pay contactless via card or phone
-/-Do not approach the cashier too much";;
+/-Do not approach the cashier too much";https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_pay_contactless-10.png?alt=media&token=bdfa2a1e-dab5-410f-ac7f-2375472fb960;
 5:de;Seid lieb zueinander!;"/-Achte auf die anderen Kunden und nimm nur so viel du brauchst
 /-Sende ein Lï¿½cheln an alle, die auf die Regeln achten
 /-Lass Handtaschen und Handy zu Hause, wenn du sie nicht brauchst. Je mehr Gegenstï¿½nde berï¿½hrt werden, desto hï¿½her ist das Risiko einer ï¿½bertragung";;
-5:en;Is there some tension?;;;
+5:en;Be kind to each other!;"/-Be kind to each other!
+/-Take care of other customers and only take as much as you need
+/-Send a smile to everybody who cares for the rules
+/-Leave all unnecessary bags and things at home you do not need. Touching less items reduces infection risk";;
 6:de;Ist die Stimmung doch mal angespannt?;"/-Bewahre Ruhe und halte Abstand 
 /-Bleibe freundlich und versuche das Problem ausfindig zu machen: Frage ob du vielleicht helfen kannst oder entziehe dich der Situation";;
-6:en;;;;
+6:en;Is there some tension?;"/-Keep calm and stay at distance
+/-Be friendly and try to find the problem: Ask if you can help or leave the situation";;

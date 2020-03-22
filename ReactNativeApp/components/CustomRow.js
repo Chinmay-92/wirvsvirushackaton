@@ -22,16 +22,20 @@ const styles = StyleSheet.create({
         textAlign: "left",
         fontStyle: "bold",
         color: 'blue',
-        marginBottom:10,
+        marginBottom: 10,
     },
     container_text: {
         flex: 1,
         flexDirection: 'row',
         marginLeft: 12,
         justifyContent: 'center',
+<<<<<<< HEAD
         marginTop:5,
         //fontSize: 15,
         
+=======
+        marginTop: 5,
+>>>>>>> 33f09da02183b001259c47c0cfa8752bb02c8e7a
     },
     description: {
         fontSize: 15,
@@ -68,21 +72,29 @@ function handleHelpPress() {
     );
 }
 
-const CustomRow = ({ title, description, image_url }) => (
+const CustomRow = ({ title, description, image_url, sub_url }) => (
     <View style={styles.container}>
-        <Image source={{ uri: image_url }} style={styles.photo} >
-        </Image>
         <View style={styles.container_text}>
             <View style={styles.mainContainer}>
                 <Text style={styles.title}>
                     {title}
                 </Text>
-                <Text style={styles.description}>
-                    {description}
-                </Text>
-                {/* <WebView
-                    originWhitelist={['*']}
-                    source={{ html: '<p>`${description}`</p>' }} /> */}
+                {image_url !== "" ?
+                    <Image source={{ uri: image_url }} style={styles.photo} />
+                    : <View />}
+                {description !== "" ?
+                    <Text style={styles.description}>
+                        {description}
+                    </Text>
+                    : <View />}
+                {sub_url ? <View style={styles.helpContainer}>
+                    <TouchableOpacity onPress={openLink(sub_url)} style={styles.helpLink}>
+                        <Text style={styles.helpLinkText}>
+                            {sub_url}
+                        </Text>
+                    </TouchableOpacity>
+                </View>
+                    : <View />}
             </View>
             {/* <View style={styles.helpContainer}>
                 <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
@@ -94,6 +106,8 @@ const CustomRow = ({ title, description, image_url }) => (
     </View>
 );
 
-
+function openLink(url) {
+    WebBrowser.openBrowserAsync(url);
+}
 
 export default CustomRow;

@@ -7,6 +7,10 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
+<<<<<<< HEAD
+=======
+        alignItems: "center",
+>>>>>>> 33f09da02183b001259c47c0cfa8752bb02c8e7a
         padding: 10,
         marginLeft: 16,
         marginRight: 16,
@@ -67,17 +71,30 @@ function handleHelpPress() {
     );
 }
 
-const CustomRow = ({ title, description, image_url }) => (
+const CustomRow = ({ title, description, image_url, sub_url }) => (
     <View style={styles.container}>
 
-<View style={styles.container_text}>
+        <View style={styles.container_text}>
             <View style={styles.mainContainer}>
                 <Text style={styles.title}>
                     {title}
                 </Text>
-                <Text style={styles.description}>
-                    {description}
-                </Text>
+                {image_url !== "" ?
+                    <Image source={{ uri: image_url }} style={styles.photo} />
+                    : <View />}
+                {description !== "" ?
+                    <Text style={styles.description}>
+                        {description}
+                    </Text>
+                    : <View />}
+                {sub_url ? <View style={styles.helpContainer}>
+                    <TouchableOpacity onPress={openLink(sub_url)} style={styles.helpLink}>
+                        <Text style={styles.helpLinkText}>
+                            {sub_url}
+                        </Text>
+                    </TouchableOpacity>
+                </View>
+                    : <View />}
             </View>
             {/* <View style={styles.helpContainer}>
                 <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
@@ -85,10 +102,12 @@ const CustomRow = ({ title, description, image_url }) => (
                 </TouchableOpacity>
             </View> */}
         </View>
-        <Image source={{ uri: image_url }} style={styles.photo} >
-        </Image>
 
     </View>
 );
+
+function openLink(url) {
+    WebBrowser.openBrowserAsync(url);
+}
 
 export default CustomRow;
