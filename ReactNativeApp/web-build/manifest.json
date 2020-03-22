@@ -4,11 +4,11 @@
   "dir": "auto",
   "display": "standalone",
   "lang": "en",
-  "name": "VersorgungVsVirus",
+  "name": "VersogerVsVirus",
   "orientation": "portrait",
   "prefer_related_applications": true,
   "related_applications": [],
-  "short_name": "VersorgungVsVirus",
+  "short_name": "VersogerVsVirus",
   "start_url": ".",
   "icons": [
     {

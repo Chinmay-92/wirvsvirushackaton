@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "VersorgungVsVirus",
-    "slug": "VersorgungVsVirus",
+    "name": "VersogerVsVirus",
+    "slug": "VersogerVsVirus",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [

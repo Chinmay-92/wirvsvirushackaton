@@ -28,7 +28,7 @@ i18n
                     "subUrl0": "",
                     "title1": "Your extra layer of security",
                     "description1": "\u2B24 Wash your hands prior and after shopping\nIf you have single-use gloves use them to pick up items from shelves\n\u2B24 Do not reuse gloves and use them correctly (see video)\n\u2B24 You do not have gloves? Use the small plastic bags for fruits and vegetables instead.\n\u2B24 Do not touch your skin or face to keep you and everyone safe",
-                    "imageUrl1": "https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_touch_goods_both-20.png?alt=media&token=4167911e-be31-4d2e-b014-541d110b43c8",
+                    "imageUrl1": "https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_touch_goods_both_square-23.png?alt=media&token=0303209e-2a46-4b39-839a-9adb4402085f",
                     "subUrl1": "https://www.youtube.com/watch?v=xueBYfElFEg",
                     "title2": "Night owl or early bird? Be both",
                     "description2": "\u2B24 Infection risk increases in crowded areas\n\u2B24 Try to avoid trips to the supermarket during rush hours\n\u2B24 Are you encountering too many people? Go for a short walk and check again afterwards",
@@ -48,8 +48,8 @@ i18n
                     "subUrl5": "",
                     "title6": "Is there some tension?",
                     "description6": "\u2B24 Keep calm and stay at distance\n\u2B24 Be friendly and try to find the problem: Ask if you can help or leave the situation",
-                    "imageUrl6": "https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_stay_calm.png?alt=media&token=284782dc-0f69-4a14-9e3b-5660dac29042",
-                    "subUrl6": ""
+                    "imageUrl6": "https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_stay%20calm_square-24.png?alt=media&token=ad4aaa98-b3f7-43fb-a643-1df6581e55a2",
+                    "subUrl6": "https://www.lecturio.de/magazin/konflikte-loesen-ohne-faeuste-5-tipps-die-eine-eskalation-verhindern/"
                 }
             },
             de: {
@@ -65,7 +65,7 @@ i18n
                     "subUrl0": "",
                     "title1": "Deine extra Schutzschicht",
                     "description1": "\u2B24 Wasche dir vor und nach dem Einkaufen die Hände \n\u2B24 Wenn du Handschuhe hast: Verwende sie nur einmal und benutzte sie richtig (siehe Video)\n\u2B24 Keine Handschuhe zur Hand? Verwende Plastiktüten aus der Obst und Gemüseabteilung\n\u2B24 Fasse dir nicht ins Gesicht, damit deine Schutzmaßnahmen wirksam bleiben.",
-                    "imageUrl1": "https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_touch_goods_both-20.png?alt=media&token=4167911e-be31-4d2e-b014-541d110b43c8",
+                    "imageUrl1": "https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_touch_goods_both_square-23.png?alt=media&token=0303209e-2a46-4b39-839a-9adb4402085f",
                     "subUrl1": "https://www.youtube.com/watch?v=xueBYfElFEg",
                     "title2": "Früher Vogel oder Nachteule? Beides gut!",
                     "description2": "\u2B24 Aufenthalte in größere Menschenmengen erhöhen das Infektionsrisiko\n\u2B24 Versuche deinen Einkauf außerhalb von Stoßzeiten zu machen\n\u2B24 Sollte es zu voll sein, nutz die Zeit und geh eine Runde spazieren, um dem Ansturm zu entgehen",
@@ -85,7 +85,7 @@ i18n
                     "subUrl5": "",
                     "title6": "Ist die Stimmung doch mal angespannt?",
                     "description6": "\u2B24 Bewahre Ruhe und halte Abstand \n\u2B24 Bleibe freundlich und versuche das Problem ausfindig zu machen: Frage ob du vielleicht helfen kannst oder entziehe dich der Situation",
-                    "imageUrl6": "https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_stay_calm.png?alt=media&token=284782dc-0f69-4a14-9e3b-5660dac29042",
+                    "imageUrl6": "https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_stay%20calm_square-24.png?alt=media&token=ad4aaa98-b3f7-43fb-a643-1df6581e55a2",
                     "subUrl6": "https://www.lecturio.de/magazin/konflikte-loesen-ohne-faeuste-5-tipps-die-eine-eskalation-verhindern/"
                 }
             }
