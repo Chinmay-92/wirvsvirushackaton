@@ -12,15 +12,15 @@ const styles = StyleSheet.create({
         marginRight: 16,
         marginTop: 8,
         marginBottom: 8,
-        borderRadius: 5,
+        borderRadius: 10,
         backgroundColor: '#FFF',
         elevation: 2,
         alignItems:'center',
     },
     title: {
-        fontSize: 18,
+        fontSize: 22,
         textAlign: "left",
-        fontStyle: "normal",
+        fontStyle: "bold",
         color: 'blue',
         marginBottom:10,
     },
@@ -30,11 +30,13 @@ const styles = StyleSheet.create({
         marginLeft: 12,
         justifyContent: 'center',
         marginTop:5,
+        //fontSize: 15,
         
     },
     description: {
-        fontSize: 11,
+        fontSize: 15,
         fontStyle: 'italic',
+        marginBottom:15,
     },
     photo: {
         
