@@ -1,7 +1,31 @@
-id;title;description;image
-1:en;my first entry;"this is a text
--this is a bullet point
--and this also";/dev/null
-1:de;Der erste Eintrag;Das ist auch ein Text;/dev/null
-2:en;my second entry;;/dev/x
-2:de;Der zweite Eintrag;Das ist ein anderer Text;/dev/x
+id;title;description;image;suburl
+1:en;Your extra layer of security;"/-Use single-use gloves to pick up items from shelves
+/-Do not reuse gloves and do not touch your face, the area around your eyes, or your nose with them
+/-You do not have gloves? Use the small plastic bags for fruits and vegetables instead. Again: Do not touch your skin or face with them.";https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_wear_gloves.png?alt=media&token=46ac2b21-1c22-4d54-a960-02e7ab9b561f;https://www.youtube.com/watch?v=xueBYfElFEg
+1:de;Deine extra Schutzschicht;"/-Einmalhandschuhe beim Anfassen von Waren verringern das Infektionsrisiko. 
+/-Verwende die Handschuhe nicht f�r mehrere Eink�ufe. Ber�hre sie beim Anziehen nicht von au�en
+/-Keine Handschuhe zur Hand? Verwende Plastikt�ten aus der Obst und Gem�seabteilung
+/-Fasse dir auch mit Handschuhen nicht ins Gesicht, damit du keine Viren darauf �bertr�gst";https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_wear_gloves.png?alt=media&token=46ac2b21-1c22-4d54-a960-02e7ab9b561f;https://www.youtube.com/watch?v=xueBYfElFEg
+2:en;Night owl or early bird? Be both;"/-Infection risk increases in crowded areas
+/-Try to avoid trips to the supermarket during rush hours
+/-Are you encountering too many people? Go for a short walk and check again afterwards";https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_Layout-Time.png?alt=media&token=1ede6536-9f44-4b6f-85b1-2006599fc423;Link to time slot management app
+2:de;Fr�her Vogel oder Nachteule? Beides gut!;"/-Aufenthalte in gr��ere Menschenmengen erh�hen das Infektionsrisiko
+/-Versuche deinen Einkauf au�erhalb von Sto�zeiten zu machen
+/-Sollte es zu voll sein, nutz die Zeit und geh eine Runde spazieren, um dem Ansturm zu entgehen";https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_Layout-Time.png?alt=media&token=1ede6536-9f44-4b6f-85b1-2006599fc423;Link to time slot management app
+3:en;Choose wisely!;"/-Stand back before choosing goods
+/-Feel free to pick your favorites from the shelves, but be careful: Once handled, you should not put it back.
+/-One after another: Please keep distance from others";https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_pick_products.png?alt=media&token=bb09e758-2799-4019-ab3b-3f22e897d4c7;
+3:de;Triff deine Wahl!;"/-Gehe nicht zu nah an die Lebensmitteln heran solange du aussuchst
+/-Such dir dein liebstes Lebensmittel aus bevor du es anfasst. Was du in die Hand nimmst Sollte nicht zur�ck ins Regal kommen
+/-Einer nach dem anderen: Achte auf Abstand zu deinen Mitmenschen";https://firebasestorage.googleapis.com/v0/b/wirvsvirus-65979.appspot.com/o/Hackathon_pick_products.png?alt=media&token=bb09e758-2799-4019-ab3b-3f22e897d4c7;
+4:de;Bist du an der Kasse?;"/-Bezahle bargeldlos wenn immer m�glich (EC / Kreditkarte / Handy)
+/-Sch�tze die Kassierer*innen und bleib hinter der Scheibe ";;
+4:en;Are you at the counter?;"/-Pay contactless via card or phone
+/-Do not approach the cashier too much";;
+5:de;Seid lieb zueinander!;"/-Achte auf die anderen Kunden und nimm nur so viel du brauchst
+/-Sende ein L�cheln an alle, die auf die Regeln achten
+/-Lass Handtaschen und Handy zu Hause, wenn du sie nicht brauchst. Je mehr Gegenst�nde ber�hrt werden, desto h�her ist das Risiko einer �bertragung";;
+5:en;Is there some tension?;;;
+6:de;Ist die Stimmung doch mal angespannt?;"/-Bewahre Ruhe und halte Abstand 
+/-Bleibe freundlich und versuche das Problem ausfindig zu machen: Frage ob du vielleicht helfen kannst oder entziehe dich der Situation";;
+6:en;;;;
