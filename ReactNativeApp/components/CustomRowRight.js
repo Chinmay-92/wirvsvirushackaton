@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     },
     description: {
         fontSize: 15,
-        fontStyle: 'italic',
         marginBottom: 15,
     },
     photo: {
