@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState, useEffect } from 'react';
 import { Image, Platform, Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
@@ -7,51 +8,74 @@ import CustomListview from '../components/CustomListview'
 
 import { MonoText } from '../components/StyledText';
 
-function getData() {
+function getData(t) {
   return [
     {
-      key: 1, title: 'Albert Einstein',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-      image_url: 'http://vivirtupasion.com/wp-content/uploads/2016/05/DANI_PERFILzoomCircle.png'
+      key: 1, title: t('title1'),
+      description: t('description1'),
+      image_url: t('imageUrl1')
     },
     {
-      key: 2,
-      title: 'Isaac newton',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-      image_url: 'http://3.bp.blogspot.com/-jd5x3rFRLJc/VngrSWSHcjI/AAAAAAAAGJ4/ORPqZNDpQoY/s1600/Profile%2Bcircle.png'
+      key: 2, title: t('title2'),
+      description: t('description2'),
+      image_url: t('imageUrl2')
     },
     {
-      key: 3, title: 'Albert Einstein',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-      image_url: 'http://vivirtupasion.com/wp-content/uploads/2016/05/DANI_PERFILzoomCircle.png'
+      key: 3, title: t('title3'),
+      description: t('description3'),
+      image_url: t('imageUrl3')
     },
     {
-      key: 4,
-      title: 'Isaac newton',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-      image_url: 'http://3.bp.blogspot.com/-jd5x3rFRLJc/VngrSWSHcjI/AAAAAAAAGJ4/ORPqZNDpQoY/s1600/Profile%2Bcircle.png'
-    },
-    {
-      key: 5,
-      title: 'Isaac newton',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-      image_url: 'http://3.bp.blogspot.com/-jd5x3rFRLJc/VngrSWSHcjI/AAAAAAAAGJ4/ORPqZNDpQoY/s1600/Profile%2Bcircle.png'
-    },
-    {
-      key: 6,
-      title: 'Isaac newton',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-      image_url: 'http://3.bp.blogspot.com/-jd5x3rFRLJc/VngrSWSHcjI/AAAAAAAAGJ4/ORPqZNDpQoY/s1600/Profile%2Bcircle.png'
+      key: 4, title: t('title4'),
+      description: t('description4'),
+      image_url: t('imageUrl5')
     }
   ]
 }
 
 export default function HomeScreen() {
+
+  let [faqData, setfaqData] = useState([]);
   const { t, i18n } = useTranslation();
 
   const changeLanguage = lng => {
     i18n.changeLanguage(lng);
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        console.log("calling useEffect", t('title4'))
+        const response = await getData(t);
+        console.log("got the respone",response)
+        //const response = await axios.get(process.env.DEV_URL+"/user/get/"+token)
+        setfaqData(response)
+        console.log('mount it!',faqData);
+      } catch (error) {
+        console.error(error);
+      }
+      console.log('mount it!',faqData);
+    }
+
+    fetchData()
+  }
+    , []);
+
+  const renderFields = () => {
+    if (faqData != {}) {
+      console.log('returning',faqData);
+      
+      return (
+        <CustomListview
+          itemList={faqData}
+        />
+      )
+    }
+    return ""
+  }
+
+
+  console.log(faqData)
 
   return (
     <View style={styles.container}>
@@ -85,10 +109,9 @@ export default function HomeScreen() {
           />
         </View>
 
-        <CustomListview
-          itemList={getData()}
-        />
-
+        <View>
+        {renderFields()}
+        </View>
         {/* <View style={styles.helpContainer}>
           <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
             <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
