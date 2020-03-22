@@ -30,6 +30,18 @@ function getData(t) {
       description: t('description4'),
       image_url: t('imageUrl4'),
       sub_url: t('subUrl4')
+    },
+    {
+      key: 5, title: t('title5'),
+      description: t('description5'),
+      image_url: t('imageUrl5'),
+      sub_url: t('subUrl5')
+    },
+    {
+      key: 6, title: t('title6'),
+      description: t('description6'),
+      image_url: t('imageUrl6'),
+      sub_url: t('subUrl6')
     }
   ]
 }
