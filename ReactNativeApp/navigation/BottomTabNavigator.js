@@ -16,14 +16,23 @@ export default function BottomTabNavigator({ navigation, route }) {
 
   return (
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}
-
       tabBarOptions={{
-        activeBackgroundColor: '#00FFFF',
-        inactiveBackgroundColor: '#00FFFF',
-        activeTintColor: 'blue',
-        inactiveTintColor: 'black',
+        activeBackgroundColor: '#00bbdd',
+        inactiveBackgroundColor: '#00bbde',
+        activeTintColor: 'white',
+        inactiveTintColor: 'grey',
         labelStyle: {
           fontSize: 18,
+        },
+        style: {
+          borderTopWidth: 0,
+          paddingTop: 3,
+          paddingBottom: 4,
+          height: 60,
+          shadowColor: '#000',
+          shadowOpacity: 0.1,
+          shadowRadius: 20,
+          shadowOffset: { width: 0, height: 0 }
         }
       }}>
 
