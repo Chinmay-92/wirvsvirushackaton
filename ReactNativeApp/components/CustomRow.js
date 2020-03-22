@@ -22,12 +22,14 @@ const styles = StyleSheet.create({
         textAlign: "left",
         fontStyle: "normal",
         color: 'blue',
+        marginBottom:10,
     },
     container_text: {
         flex: 1,
         flexDirection: 'row',
         marginLeft: 12,
         justifyContent: 'center',
+        marginTop:5,
         
     },
     description: {
