@@ -17,9 +17,9 @@ export default function BottomTabNavigator({ navigation, route }) {
   return (
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}
       tabBarOptions={{
-        activeBackgroundColor: '#00bbdd',
-        inactiveBackgroundColor: '#00bbde',
-        activeTintColor: 'white',
+        activeBackgroundColor: '#00FFCC',
+        inactiveBackgroundColor: '#00FFCC',
+        activeTintColor: 'black',
         inactiveTintColor: 'grey',
         labelStyle: {
           fontSize: 18,
@@ -42,18 +42,18 @@ export default function BottomTabNavigator({ navigation, route }) {
         name="Home"
         component={HomeScreen}
         options={{
-          title: 'Section 1',
+          title: '',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-home" />,
         }}
       />
-      <BottomTab.Screen
+      {/* <BottomTab.Screen
         name="Links"
         component={LinksScreen}
         options={{
           title: 'Section 2',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
         }}
-      />
+      /> */}
     </BottomTab.Navigator>
   );
 }

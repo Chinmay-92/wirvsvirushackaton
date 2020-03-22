@@ -106,7 +106,7 @@ export default function HomeScreen() {
             {
               
               Platform.OS === 'ios' ?
-                <Button color="white" onPress={() => changeLanguage("de")} title={t("DE")} /> :
+                <Button color="black" onPress={() => changeLanguage("de")} title={t("DE")} /> :
                 <Button onPress={() => changeLanguage("de")} title={t("DE")} />
             }
 
@@ -116,7 +116,7 @@ export default function HomeScreen() {
             {
               
               Platform.OS === 'ios' ?
-                <Button color="white" onPress={() => changeLanguage("en")} title={t("EN")} /> :
+                <Button color="black" onPress={() => changeLanguage("en")} title={t("EN")} /> :
                 <Button onPress={() => changeLanguage("en")} title={t("EN")} />
             }
           </View>
@@ -255,7 +255,7 @@ const styles = StyleSheet.create({
     }),
     margin: 2,
     flexDirection: 'row',
-    backgroundColor: '#68a0cf',
+    backgroundColor: '#00FFCC',
     borderRadius: 10,
     borderWidth: 1,
     alignItems: 'center'

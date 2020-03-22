@@ -23,7 +23,7 @@ const CustomListview = ({ itemList }) => (
                         image_url={item.image_url}
                         sub_url={item.sub_url}
                     /> :
-                    <CustomRowRight
+                    <CustomRow
                         title={item.title}
                         description={item.description}
                         image_url={item.image_url}

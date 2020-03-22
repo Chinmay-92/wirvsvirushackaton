@@ -19,10 +19,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     title: {
-        fontSize: 22,
+        fontSize: 26,
         textAlign: "left",
         fontStyle: "normal",
-        color: 'red',
+        color: '#330066',
         marginBottom: 10,
     },
     container_text: {
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
 
     },
     description: {
-        fontSize: 15,
+        fontSize: 18,
         marginBottom: 15,
     },
     photo: {
@@ -53,11 +53,13 @@ const styles = StyleSheet.create({
         marginLeft: -5
     },
     helpLink: {
+        alignItems: 'flex-start',
         paddingVertical: 15,
     },
     helpLinkText: {
         fontSize: 14,
         color: '#2e78b7',
+        textAlign: 'left'
     }
 });
 

@@ -18,10 +18,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     title: {
-        fontSize: 22,
+        fontSize: 26,
         textAlign: "left",
         fontStyle: "normal",
-        color: 'blue',
+        color: '#330066',
         marginBottom: 10,
     },
     container_text: {
@@ -32,8 +32,8 @@ const styles = StyleSheet.create({
         marginTop: 5,
     },
     description: {
-        fontSize: 15,
-        marginBottom: 15,
+        fontSize: 18,
+        marginBottom: 5,
     },
     photo: {
 
@@ -51,11 +51,12 @@ const styles = StyleSheet.create({
         marginLeft: -5
     },
     helpLink: {
-        paddingVertical: 15,
+        paddingVertical: 5,
     },
     helpLinkText: {
-        fontSize: 14,
+        fontSize: 20,
         color: '#2e78b7',
+        textAlign: 'left'
     }
 });
 
