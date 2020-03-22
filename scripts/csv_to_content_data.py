@@ -6,11 +6,11 @@ import re
 
 # This script prepares language content data for our project
 
-BULLET_POINT_INLINE = r"\u2B24"
+#BULLET_POINT_INLINE = "\u2B24"
 
 def convert(f_in, f_out):
 
-    with open(f_in) as csv_file:
+    with open(f_in, encoding="utf8") as csv_file:
         csv_reader = csv.DictReader(csv_file, delimiter=";")
         #print(csv_reader.fieldnames)
 
@@ -53,7 +53,10 @@ def format_bullet_points(text):
     # Regex not working. falling back to string replace
     #regex = re.compile(r"\/\-\s*")
     #return regex.sub(BULLET_POINT_INLINE + " ", text)
-    return text.replace("/-", BULLET_POINT_INLINE + " ")
+    #text_with_bullet = text.replace("/-", BULLET_POINT_INLINE + " ")
+    #text_with_bullet = text_with_bullet.replace("2b2", "2B2")
+    #return text_with_bullet
+    return text
 
 
 if __name__ == "__main__":
