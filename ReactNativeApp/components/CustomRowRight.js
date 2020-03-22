@@ -16,34 +16,34 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         backgroundColor: '#FFF',
         elevation: 2,
-        alignItems:'center',
+        alignItems: 'center',
     },
     title: {
         fontSize: 22,
         textAlign: "left",
         fontStyle: "normal",
         color: 'red',
-        marginBottom:10,
+        marginBottom: 10,
     },
     container_text: {
         flex: 1,
         flexDirection: 'row',
         marginLeft: 12,
         justifyContent: 'center',
-        marginTop:5,
-        
+        marginTop: 5,
+
     },
     description: {
         fontSize: 15,
         fontStyle: 'italic',
-        marginBottom:15,
+        marginBottom: 15,
     },
     photo: {
-        
+
         flexDirection: 'column',
         height: 150,
         width: 150,
-        },
+    },
     helpContainer: {
         marginTop: 15,
         alignItems: 'center',
@@ -85,7 +85,7 @@ const CustomRow = ({ title, description, image_url, sub_url }) => (
                     </Text>
                     : <View />}
                 {sub_url ? <View style={styles.helpContainer}>
-                    <TouchableOpacity onPress={openLink(sub_url)} style={styles.helpLink}>
+                    <TouchableOpacity onPress={() => openLink(sub_url)} style={styles.helpLink}>
                         <Text style={styles.helpLinkText}>
                             {sub_url}
                         </Text>

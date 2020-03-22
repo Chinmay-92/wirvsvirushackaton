@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: '#FFF',
         elevation: 2,
-        alignItems:'center',
+        alignItems: 'center',
     },
     title: {
         fontSize: 22,
@@ -34,14 +34,14 @@ const styles = StyleSheet.create({
     description: {
         fontSize: 15,
         fontStyle: 'italic',
-        marginBottom:15,
+        marginBottom: 15,
     },
     photo: {
-        
+
         flexDirection: 'column',
         height: 150,
         width: 150,
-        },
+    },
     helpContainer: {
         marginTop: 15,
         alignItems: 'center',
@@ -82,7 +82,7 @@ const CustomRow = ({ title, description, image_url, sub_url }) => (
                     </Text>
                     : <View />}
                 {sub_url ? <View style={styles.helpContainer}>
-                    <TouchableOpacity onPress={openLink(sub_url)} style={styles.helpLink}>
+                    <TouchableOpacity onPress={() => openLink(sub_url)} style={styles.helpLink}>
                         <Text style={styles.helpLinkText}>
                             {sub_url}
                         </Text>
