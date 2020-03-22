@@ -71,11 +71,11 @@ const CustomRow = ({ title, description, image_url }) => (
                     {description}
                 </Text>
             </View>
-            <View style={styles.helpContainer}>
+            {/* <View style={styles.helpContainer}>
                 <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
                     <Text style={styles.helpLinkText}>See more!</Text>
                 </TouchableOpacity>
-            </View>
+            </View> */}
         </View>
         <Image source={{ uri: image_url }} style={styles.photo} >
         </Image>

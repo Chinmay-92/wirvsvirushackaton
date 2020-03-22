@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { Image, Platform, Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Platform, Button, StyleSheet, Text, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
 import { useTranslation, Trans } from "react-i18next";
 import CustomListview from '../components/CustomListview'
-
-import { MonoText } from '../components/StyledText';
+import Flag from 'react-native-flags';
 
 function getData(t) {
   return [
@@ -43,7 +42,6 @@ export default function HomeScreen() {
     const fetchData = async () => {
       try {
         const response = await getData(t);
-        //const response = await axios.get(process.env.DEV_URL+"/user/get/"+token)
         setfaqData(response)
       } catch (error) {
         console.error(error);
@@ -51,124 +49,61 @@ export default function HomeScreen() {
     }
 
     fetchData()
-};
+  };
 
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const response = await getData(t);
-      //const response = await axios.get(process.env.DEV_URL+"/user/get/"+token)
-      setfaqData(response)
-    } catch (error) {
-      console.error(error);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await getData(t);
+        setfaqData(response)
+      } catch (error) {
+        console.error(error);
+      }
     }
+
+    fetchData()
   }
+    , []);
 
-  fetchData()
-}
-  , []);
+  const renderFields = () => {
+    if (faqData != {}) {
 
-const renderFields = () => {
-  if (faqData != {}) {
-
-    return (
-      <CustomListview
-        itemList={faqData}
-      />
-    )
-  }
-  return ""
-}
-
-return (
-  <View style={styles.container}>
-    <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-
-      <View style={styles.buttonMainContainer}>
-        <View style={styles.buttonContainer}>
-          <Button onPress={() => changeLanguage("de")} title={t("DE")} />
-        </View>
-        <View style={styles.buttonContainer}>
-          <Button onPress={() => changeLanguage("en")} title={t("EN")} />
-        </View>
-      </View>
-
-      <View style={styles.getStartedContainer}>
-        <Text>
-          <Trans>
-            {t("Welcome Message")}
-          </Trans>
-        </Text>
-      </View>
-
-      <View style={styles.welcomeContainer}>
-        <Image
-          source={
-            __DEV__
-              ? require('../assets/images/robot-dev.png')
-              : require('../assets/images/robot-prod.png')
-          }
-          style={styles.welcomeImage}
+      return (
+        <CustomListview
+          itemList={faqData}
         />
-      </View>
+      )
+    }
+    return ""
+  }
 
-      <View>
-        {renderFields()}
-      </View>
-      {/* <View style={styles.helpContainer}>
-          <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
-            <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
-          </TouchableOpacity>
-        </View> */}
-    </ScrollView>
+  return (
+    <View style={styles.container}>
+      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
 
-    {/* <View style={styles.tabBarInfoContainer}>
-        <Text style={styles.tabBarInfoText}>Footer for menus or links</Text>
-        
-        <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-          <MonoText style={styles.codeHighlightText}>navigation/BottomTabNavigator.js</MonoText>
+        <View key="1" style={styles.buttonMainContainer}>
+
+          <View style={styles.buttonContainer}>
+            <Button onPress={() => changeLanguage("de")} title={t("DE")} />
+          </View>
+          <View style={styles.buttonContainer}>
+            <Button onPress={() => changeLanguage("en")} title={t("EN")} />
+          </View>
         </View>
-      </View> */}
-  </View>
-);
+
+        <View key="2">
+          {renderFields()}
+        </View>
+
+      </ScrollView>
+
+    </View>
+  );
 }
 
 HomeScreen.navigationOptions = {
   header: null,
 };
-
-function DevelopmentModeNotice() {
-  if (__DEV__) {
-    const learnMoreButton = (
-      <Text onPress={handleLearnMorePress} style={styles.helpLinkText}>
-        Learn more
-      </Text>
-    );
-
-    return (
-      <Text style={styles.developmentModeText}>
-        Development mode is enabled: your app will be slower but you can use useful development
-        tools. {learnMoreButton}
-      </Text>
-    );
-  } else {
-    return (
-      <Text style={styles.developmentModeText}>
-        You are not in development mode: your app will run at full speed.
-      </Text>
-    );
-  }
-}
-
-function handleLearnMorePress() {
-  WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/workflow/development-mode/');
-}
-
-function handleHelpPress() {
-  WebBrowser.openBrowserAsync(
-    'https://docs.expo.io/versions/latest/get-started/create-a-new-app/#making-your-first-change'
-  );
-}
 
 const styles = StyleSheet.create({
   container: {
@@ -183,7 +118,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   contentContainer: {
-    paddingTop: 30,
+
   },
   welcomeContainer: {
     alignItems: 'center',
@@ -257,18 +192,21 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#2e78b7',
   },
-  // buttonMainContainer: {
-  //   flex: 1,
-  //   flexDirection: 'row',
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  // },
+  flagContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+  },
   buttonMainContainer: {
     width: 200,
     height: 100,
     margin: 10,
+    marginTop: -20,
+    marginBottom: -20,
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   buttonContainer: {
     flex: 1,
