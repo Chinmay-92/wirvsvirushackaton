@@ -6,7 +6,7 @@ import * as WebBrowser from 'expo-web-browser';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        flexDirection: 'row',
+        flexDirection: 'column',
         padding: 10,
         marginLeft: 16,
         marginRight: 16,
@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         backgroundColor: '#FFF',
         elevation: 2,
+        alignItems:'center',
     },
     title: {
         fontSize: 18,
@@ -24,18 +25,21 @@ const styles = StyleSheet.create({
     },
     container_text: {
         flex: 1,
-        flexDirection: 'column',
+        flexDirection: 'row',
         marginLeft: 12,
         justifyContent: 'center',
+        
     },
     description: {
         fontSize: 11,
         fontStyle: 'italic',
     },
     photo: {
+        
+        flexDirection: 'column',
         height: 150,
         width: 150,
-    },
+        },
     helpContainer: {
         marginTop: 15,
         alignItems: 'center',
