@@ -37,10 +37,9 @@ const styles = StyleSheet.create({
         marginBottom: 5,
     },
     photo: {
-
         flexDirection: 'column',
-        height: 150,
-        width: 150,
+        height: 250,
+        width: 250,
     },
     helpContainer: {
         marginTop: 15,
