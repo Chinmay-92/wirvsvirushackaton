@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 22,
         textAlign: "left",
-        fontStyle: "bold",
+        fontStyle: "normal",
         color: 'blue',
         marginBottom: 10,
     },
@@ -29,13 +29,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginLeft: 12,
         justifyContent: 'center',
-<<<<<<< HEAD
-        marginTop:5,
-        //fontSize: 15,
-        
-=======
         marginTop: 5,
->>>>>>> 33f09da02183b001259c47c0cfa8752bb02c8e7a
     },
     description: {
         fontSize: 15,
