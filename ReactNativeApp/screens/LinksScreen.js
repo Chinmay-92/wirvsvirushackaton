@@ -80,11 +80,19 @@ export default function LinksScreen() {
 
         <View key="1" style={styles.buttonMainContainer}>
 
-          <View style={styles.buttonContainer}>
-            <Button color="white" onPress={() => changeLanguage("de")} title={t("DE")} />
+        <View style={styles.buttonContainer}>
+            {
+              Platform.OS === 'ios' || Platform.OS === 'android' ?
+                <Button color="white" onPress={() => changeLanguage("de")} title={t("DE")} /> :
+                <Button onPress={() => changeLanguage("de")} title={t("DE")} />
+            }
           </View>
           <View style={styles.buttonContainer}>
-            <Button color="white" onPress={() => changeLanguage("en")} title={t("EN")} />
+            {
+              Platform.OS === 'ios' || Platform.OS === 'android' ?
+                <Button color="white" onPress={() => changeLanguage("en")} title={t("EN")} /> :
+                <Button onPress={() => changeLanguage("en")} title={t("EN")} />
+            }
           </View>
         </View>
 
@@ -201,13 +209,20 @@ const styles = StyleSheet.create({
     width: 200,
     height: 40,
     marginRight: 20,
-    marginLeft: 100,
+    ...Platform.select({
+      ios: {
+        marginLeft: 100
+      },
+      android: {
+        marginLeft: 100
+      }
+    }),
     margin: 2,
     flexDirection: 'row',
     backgroundColor: '#68a0cf',
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: '#fff'
+    alignItems: 'center'
   },
   buttonContainer: {
     flex: 1,
