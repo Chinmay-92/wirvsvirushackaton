@@ -2,12 +2,13 @@
 import json
 import csv
 import sys
+import re
 
+# This script prepares language content data for our project
 
+BULLET_POINT_INLINE = "&#149;"
 
 def convert(f_in, f_out):
-
-    data = {}
 
     with open(f_in) as csv_file:
         csv_reader = csv.DictReader(csv_file, delimiter=";")
@@ -26,12 +27,16 @@ def convert(f_in, f_out):
 
             # Read title
             title = rows['title']
-            # Read description and image
+            
+            # Read description, image, url
             desc = rows['description']
+            desc = format_bullet_points(desc)
+
             img = rows['image']
+            url = rows['suburl']
 
             # Build the inner content added to the dict
-            line_content_dict = {'title' + id_num : title, 'description' + id_num : desc, 'imageUrl' + id_num : img}
+            line_content_dict = {'title'+id_num:title, 'description'+id_num:desc, 'imageUrl'+id_num:img, 'subUrl'+id_num : url}
 
             # Add the inner content to a language specific dict
             lang_dict = resources_dict[id_lang]
@@ -43,6 +48,14 @@ def convert(f_in, f_out):
             data = {'resources':{'name': 'Scott', 'website': 'stackabuse.com', 'from': 'Nebraska'}}
             #print(json.dumps(data, indent=4))
             json.dump({'resources': resources_dict}, json_file, indent=4)
+
+
+
+def format_bullet_points(text):
+    #Replace placeholder of bullet points with proper bullet point symbol
+    regex = re.compile(r"\/\-\s*")
+    return regex.sub(BULLET_POINT_INLINE + " ", text)
+
 
 
 if __name__ == "__main__":
