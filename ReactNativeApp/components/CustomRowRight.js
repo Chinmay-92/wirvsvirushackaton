@@ -71,14 +71,19 @@ const CustomRow = ({ title, description, image_url, sub_url }) => (
                 {image_url !== "" ?
                     <Image source={{ uri: image_url }} style={styles.photo} />
                     : <View />}
-                {image_url !== "" ?
+                {description !== "" ?
                     <Text style={styles.description}>
                         {description}
                     </Text>
                     : <View />}
-                {sub_url ? <Text style={styles.helpLinkText}>
-                    {sub_url}
-                </Text> : <View />}
+                {sub_url ? <View style={styles.helpContainer}>
+                    <TouchableOpacity onPress={openLink(sub_url)} style={styles.helpLink}>
+                        <Text style={styles.helpLinkText}>
+                            {sub_url}
+                        </Text>
+                    </TouchableOpacity>
+                </View>
+                    : <View />}
             </View>
             {/* <View style={styles.helpContainer}>
                 <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
@@ -89,5 +94,9 @@ const CustomRow = ({ title, description, image_url, sub_url }) => (
 
     </View>
 );
+
+function openLink(url) {
+    WebBrowser.openBrowserAsync(url);
+}
 
 export default CustomRow;

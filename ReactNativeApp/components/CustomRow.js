@@ -75,9 +75,11 @@ const CustomRow = ({ title, description, image_url, sub_url }) => (
                 {image_url !== "" ?
                     <Image source={{ uri: image_url }} style={styles.photo} />
                     : <View />}
-                <Text style={styles.description}>
-                    {description}
-                </Text>
+                {description !== "" ?
+                    <Text style={styles.description}>
+                        {description}
+                    </Text>
+                    : <View />}
                 {sub_url ? <View style={styles.helpContainer}>
                     <TouchableOpacity onPress={openLink(sub_url)} style={styles.helpLink}>
                         <Text style={styles.helpLinkText}>
