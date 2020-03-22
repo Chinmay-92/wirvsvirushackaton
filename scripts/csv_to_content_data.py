@@ -6,7 +6,7 @@ import re
 
 # This script prepares language content data for our project
 
-BULLET_POINT_INLINE = "&#149;"
+BULLET_POINT_INLINE = r"\u2B24"
 
 def convert(f_in, f_out):
 
@@ -43,18 +43,17 @@ def convert(f_in, f_out):
 
         # Write JSON
         with open(f_out, 'w') as json_file:
-            #data = {'resources':[{'name': 'Scott', 'website': 'stackabuse.com', 'from': 'Nebraska'}]}
-            data = {'resources':{'name': 'Scott', 'website': 'stackabuse.com', 'from': 'Nebraska'}}
-            #print(json.dumps(data, indent=4))
             json.dump(resources_dict, json_file, indent=4)
 
 
 
 def format_bullet_points(text):
     #Replace placeholder of bullet points with proper bullet point symbol
-    regex = re.compile(r"\/\-\s*")
-    return regex.sub(BULLET_POINT_INLINE + " ", text)
-
+    
+    # Regex not working. falling back to string replace
+    #regex = re.compile(r"\/\-\s*")
+    #return regex.sub(BULLET_POINT_INLINE + " ", text)
+    return text.replace("/-", BULLET_POINT_INLINE + " ")
 
 
 if __name__ == "__main__":
