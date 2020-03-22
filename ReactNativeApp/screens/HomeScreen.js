@@ -99,15 +99,17 @@ export default function HomeScreen() {
 
           <View style={styles.buttonContainer}>
             {
-              Platform.OS === 'ios'? 
+              
               Platform.OS === 'ios' ?
                 <Button color="white" onPress={() => changeLanguage("de")} title={t("DE")} /> :
                 <Button onPress={() => changeLanguage("de")} title={t("DE")} />
             }
+
+  
           </View>
           <View style={styles.buttonContainer}>
             {
-              Platform.OS === 'ios'? 
+              
               Platform.OS === 'ios' ?
                 <Button color="white" onPress={() => changeLanguage("en")} title={t("EN")} /> :
                 <Button onPress={() => changeLanguage("en")} title={t("EN")} />
