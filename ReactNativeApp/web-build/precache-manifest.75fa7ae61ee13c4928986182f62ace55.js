@@ -60,16 +60,16 @@ self.__precacheManifest = [
     "url": "/./fonts/SimpleLineIcons.ttf"
   },
   {
-    "revision": "48c7ed4e7da9792af288a60d7242d615",
-    "url": "/expo-service-worker.js"
-  },
-  {
     "revision": "541e8ad840c3fadb3981dbed76f170ba",
     "url": "/apple/splash/icon_640x1136.png"
   },
   {
     "revision": "7a7bc7ead25db795e58b336f04d2624c",
     "url": "/favicon.ico"
+  },
+  {
+    "revision": "48c7ed4e7da9792af288a60d7242d615",
+    "url": "/expo-service-worker.js"
   },
   {
     "revision": "4ca7ba9d91165e0f16578b2a4be0840c",
