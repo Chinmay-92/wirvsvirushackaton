@@ -40,94 +40,97 @@ export default function HomeScreen() {
 
   const changeLanguage = lng => {
     i18n.changeLanguage(lng);
-  };
-
-  useEffect(() => {
     const fetchData = async () => {
       try {
-        console.log("calling useEffect", t('title4'))
         const response = await getData(t);
-        console.log("got the respone",response)
         //const response = await axios.get(process.env.DEV_URL+"/user/get/"+token)
         setfaqData(response)
-        console.log('mount it!',faqData);
       } catch (error) {
         console.error(error);
       }
-      console.log('mount it!',faqData);
     }
 
     fetchData()
-  }
-    , []);
+};
 
-  const renderFields = () => {
-    if (faqData != {}) {
-      console.log('returning',faqData);
-      
-      return (
-        <CustomListview
-          itemList={faqData}
-        />
-      )
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const response = await getData(t);
+      //const response = await axios.get(process.env.DEV_URL+"/user/get/"+token)
+      setfaqData(response)
+    } catch (error) {
+      console.error(error);
     }
-    return ""
   }
 
+  fetchData()
+}
+  , []);
 
-  console.log(faqData)
+const renderFields = () => {
+  if (faqData != {}) {
 
-  return (
-    <View style={styles.container}>
-      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+    return (
+      <CustomListview
+        itemList={faqData}
+      />
+    )
+  }
+  return ""
+}
 
-        <View style={styles.buttonMainContainer}>
-          <View style={styles.buttonContainer}>
-            <Button onPress={() => changeLanguage("de")} title={t("DE")} />
-          </View>
-          <View style={styles.buttonContainer}>
-            <Button onPress={() => changeLanguage("en")} title={t("EN")} />
-          </View>
+return (
+  <View style={styles.container}>
+    <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+
+      <View style={styles.buttonMainContainer}>
+        <View style={styles.buttonContainer}>
+          <Button onPress={() => changeLanguage("de")} title={t("DE")} />
         </View>
-
-        <View style={styles.getStartedContainer}>
-          <Text>
-            <Trans>
-              {t("Welcome Message")}
-            </Trans>
-          </Text>
+        <View style={styles.buttonContainer}>
+          <Button onPress={() => changeLanguage("en")} title={t("EN")} />
         </View>
+      </View>
 
-        <View style={styles.welcomeContainer}>
-          <Image
-            source={
-              __DEV__
-                ? require('../assets/images/robot-dev.png')
-                : require('../assets/images/robot-prod.png')
-            }
-            style={styles.welcomeImage}
-          />
-        </View>
+      <View style={styles.getStartedContainer}>
+        <Text>
+          <Trans>
+            {t("Welcome Message")}
+          </Trans>
+        </Text>
+      </View>
 
-        <View>
+      <View style={styles.welcomeContainer}>
+        <Image
+          source={
+            __DEV__
+              ? require('../assets/images/robot-dev.png')
+              : require('../assets/images/robot-prod.png')
+          }
+          style={styles.welcomeImage}
+        />
+      </View>
+
+      <View>
         {renderFields()}
-        </View>
-        {/* <View style={styles.helpContainer}>
+      </View>
+      {/* <View style={styles.helpContainer}>
           <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
             <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
           </TouchableOpacity>
         </View> */}
-      </ScrollView>
+    </ScrollView>
 
-      {/* <View style={styles.tabBarInfoContainer}>
+    {/* <View style={styles.tabBarInfoContainer}>
         <Text style={styles.tabBarInfoText}>Footer for menus or links</Text>
         
         <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
           <MonoText style={styles.codeHighlightText}>navigation/BottomTabNavigator.js</MonoText>
         </View>
       </View> */}
-    </View>
-  );
+  </View>
+);
 }
 
 HomeScreen.navigationOptions = {
